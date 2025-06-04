@@ -1,0 +1,25 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+
+# ---- Virtual environment ----
+venv/
+.venv/
+
+# ---- VS Code ----
+.vscode/
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+# ---- Jupyter (por si usaste notebooks antes) ----
+.ipynb_checkpoints/
+
+# ---- Generated files ----
+catplot.png
+heatmap.png
+
+# ---- Logs ----
+*.log
