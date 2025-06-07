@@ -17,14 +17,14 @@ df['gluc'] = (df['gluc'] > 1).astype(int)
 # Draw Categorical Plot
 def draw_cat_plot():
 
-    # 5️ Crear DataFrame usando melt
+    # 5️⃣ Convertir a formato largo (melt)
     df_cat = pd.melt(
         df,
         id_vars=['cardio'],
         value_vars=['cholesterol', 'gluc', 'smoke', 'alco', 'active', 'overweight']
     )
 
-    # 6️ Agrupar y contar
+    # 6️⃣ Contar valores por categoría
     df_cat = (
         df_cat
         .value_counts()
@@ -34,7 +34,7 @@ def draw_cat_plot():
     # Renombrar columnas para que catplot funcione
     df_cat.columns = ['cardio', 'variable', 'value', 'total']
 
-    # 4️ Dibujar el gráfico categórico
+    # 7️⃣ Crear el gráfico categórico
     fig = sns.catplot(
         data=df_cat,
         x='variable',
@@ -44,4 +44,6 @@ def draw_cat_plot():
         kind='bar'
     ).fig
 
+    # 9️⃣ NO MODIFICAR ESTAS DOS LÍNEAS
+    fig.savefig('catplot.png')
     return fig
