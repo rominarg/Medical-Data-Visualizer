@@ -47,3 +47,21 @@ def draw_cat_plot():
     # 9️⃣ NO MODIFICAR ESTAS DOS LÍNEAS
     fig.savefig('catplot.png')
     return fig
+
+# Draw Heat Map
+def draw_heat_map():
+
+    # 10 Limpiar datos
+    df_heat = df[
+        (df['ap_lo'] <= df['ap_hi']) &
+        (df['height'] >= df['height'].quantile(0.025)) &
+        (df['height'] <= df['height'].quantile(0.975)) &
+        (df['weight'] >= df['weight'].quantile(0.025)) &
+        (df['weight'] <= df['weight'].quantile(0.975))
+    ]
+
+    # 12 Calcular matriz de correlación
+    corr = df_heat.corr()
+
+    return corr
+
