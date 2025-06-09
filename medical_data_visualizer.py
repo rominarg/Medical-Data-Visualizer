@@ -17,14 +17,14 @@ df['gluc'] = (df['gluc'] > 1).astype(int)
 # Draw Categorical Plot
 def draw_cat_plot():
 
-    # 5️⃣ Convertir a formato largo (melt)
+    # 5 Convertir a formato largo (melt)
     df_cat = pd.melt(
         df,
         id_vars=['cardio'],
         value_vars=['cholesterol', 'gluc', 'smoke', 'alco', 'active', 'overweight']
     )
 
-    # 6️⃣ Contar valores por categoría
+    # 6 Contar valores por categoría
     df_cat = (
         df_cat
         .value_counts()
@@ -34,7 +34,7 @@ def draw_cat_plot():
     # Renombrar columnas para que catplot funcione
     df_cat.columns = ['cardio', 'variable', 'value', 'total']
 
-    # 7️⃣ Crear el gráfico categórico
+    # 7 Crear el gráfico categórico
     fig = sns.catplot(
         data=df_cat,
         x='variable',
@@ -44,14 +44,15 @@ def draw_cat_plot():
         kind='bar'
     ).fig
 
-    # 9️⃣ NO MODIFICAR ESTAS DOS LÍNEAS
+    # 9 NO MODIFICAR ESTAS DOS LÍNEAS
     fig.savefig('catplot.png')
     return fig
 
 # Draw Heat Map
+
 def draw_heat_map():
 
-    # 10 Limpiar datos
+    # 11 Limpiar datos
     df_heat = df[
         (df['ap_lo'] <= df['ap_hi']) &
         (df['height'] >= df['height'].quantile(0.025)) &
@@ -63,5 +64,24 @@ def draw_heat_map():
     # 12 Calcular matriz de correlación
     corr = df_heat.corr()
 
-    return corr
+    # 13 Generar máscara para el triángulo superior
+    mask = np.triu(np.ones_like(corr, dtype=bool))
 
+    # 14 Configurar la figura
+    fig, ax = plt.subplots(figsize=(12, 8))
+
+    # 15 Dibujar el heatmap
+    sns.heatmap(
+        corr,
+        mask=mask,
+        annot=True,
+        fmt=".1f",
+        center=0,
+        square=True,
+        linewidths=0.5,
+        cbar_kws={"shrink": 0.5}
+    )
+
+    # 16 NO MODIFICAR ESTAS DOS LÍNEAS
+    fig.savefig('heatmap.png')
+    return fig
