@@ -64,24 +64,10 @@ def draw_heat_map():
     # 12 Calcular matriz de correlación
     corr = df_heat.corr()
 
-    # 13 Generar máscara para el triángulo superior
-    mask = np.triu(np.ones_like(corr, dtype=bool))
+# 13 Generar máscara para el triángulo superior
+mask = np.triu(np.ones_like(corr, dtype=bool))
 
-    # 14 Configurar la figura
-    fig, ax = plt.subplots(figsize=(12, 8))
+# 14 Configurar la figura
+fig, ax = plt.subplots(figsize=(12, 8))
 
-    # 15 Dibujar el heatmap
-    sns.heatmap(
-        corr,
-        mask=mask,
-        annot=True,
-        fmt=".1f",
-        center=0,
-        square=True,
-        linewidths=0.5,
-        cbar_kws={"shrink": 0.5}
-    )
 
-    # 16 NO MODIFICAR ESTAS DOS LÍNEAS
-    fig.savefig('heatmap.png')
-    return fig
