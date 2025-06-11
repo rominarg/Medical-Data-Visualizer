@@ -70,4 +70,16 @@ mask = np.triu(np.ones_like(corr, dtype=bool))
 # 14 Configurar la figura
 fig, ax = plt.subplots(figsize=(12, 8))
 
-
+    # 15 Dibujar heatmap
+        sns.heatmap(
+        corr,
+        mask=mask,
+        annot=True,
+        fmt=".1f",
+        center=0,
+        square=True,
+        linewidths=0.5,
+        cbar_kws={"shrink": 0.5},
+        ax=ax
+    )
+    
