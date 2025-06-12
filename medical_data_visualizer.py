@@ -52,7 +52,7 @@ def draw_cat_plot():
 
 def draw_heat_map():
 
-    # 11 Limpiar datos
+    # 11 Limpiar los datos
     df_heat = df[
         (df['ap_lo'] <= df['ap_hi']) &
         (df['height'] >= df['height'].quantile(0.025)) &
@@ -64,14 +64,14 @@ def draw_heat_map():
     # 12 Calcular matriz de correlación
     corr = df_heat.corr()
 
-# 13 Generar máscara para el triángulo superior
-mask = np.triu(np.ones_like(corr, dtype=bool))
+    # 13 Generar máscara del triángulo superior
+    mask = np.triu(np.ones_like(corr, dtype=bool))
 
-# 14 Configurar la figura
-fig, ax = plt.subplots(figsize=(12, 8))
+    # 14 Configurar la figura
+    fig, ax = plt.subplots(figsize=(12, 8))
 
     # 15 Dibujar heatmap
-        sns.heatmap(
+    sns.heatmap(
         corr,
         mask=mask,
         annot=True,
@@ -82,4 +82,7 @@ fig, ax = plt.subplots(figsize=(12, 8))
         cbar_kws={"shrink": 0.5},
         ax=ax
     )
-    
+
+    # 16 NO MODIFICAR ESTAS DOS LÍNEAS
+    fig.savefig('heatmap.png')
+    return fig
