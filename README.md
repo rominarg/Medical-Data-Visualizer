@@ -50,7 +50,5 @@ Cada fila representa un paciente y cada columna contiene información médica re
 * seaborn
 * unittest (tests automáticos)
 
----
-
 
 
