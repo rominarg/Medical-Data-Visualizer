@@ -50,5 +50,28 @@ Cada fila representa un paciente y cada columna contiene información médica re
 * seaborn
 * unittest (tests automáticos)
 
+##  Funcionalidades implementadas
+
+### 1. Limpieza y transformación de datos
+
+* Creación de la variable **overweight** usando el Índice de Masa Corporal (IMC)
+* Normalización de variables clínicas (0 = buen estado, 1 = mal estado)
+* Eliminación de datos inconsistentes y outliers
+
+### 2. Visualización categórica
+
+Se genera un gráfico categórico que muestra la distribución de:
+
+* colesterol
+* glucosa
+* tabaquismo
+* consumo de alcohol
+* actividad física
+* sobrepeso
+
+Comparando pacientes con y sin enfermedad cardiovascular.
+
+ Salida: `catplot.png`
+
 
 
