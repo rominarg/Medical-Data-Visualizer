@@ -73,5 +73,11 @@ Comparando pacientes con y sin enfermedad cardiovascular.
 
  Salida: `catplot.png`
 
+### 3. Mapa de calor de correlaciones
 
+Se construye un **heatmap** para analizar la correlación entre variables médicas, aplicando una máscara para el triángulo superior de la matriz.
+
+ Salida: `heatmap.png`
+
+---
 
