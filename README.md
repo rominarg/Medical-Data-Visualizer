@@ -80,4 +80,26 @@ Se construye un **heatmap** para analizar la correlación entre variables médic
  Salida: `heatmap.png`
 
 ---
+##  Cómo ejecutar el proyecto
+
+1. Clonar el repositorio
+
+```bash
+git clone <URL_DEL_REPOSITORIO>
+cd boilerplate-medical-data-visualizer
+```
+
+2. Instalar dependencias
+
+```bash
+pip install pandas matplotlib seaborn numpy
+```
+
+3. Ejecutar el proyecto
+
+```bash
+python main.py
+```
+
+Esto generará automáticamente los gráficos y ejecutará los tests.
 
