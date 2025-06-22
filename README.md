@@ -103,3 +103,16 @@ python main.py
 
 Esto generará automáticamente los gráficos y ejecutará los tests.
 
+## 🧪 Testing
+
+El proyecto incluye **tests automáticos** ubicados en `test_module.py`.
+
+Estos tests validan que:
+
+* Los datos se procesen correctamente
+* Las visualizaciones se generen según lo solicitado
+* Las funciones devuelvan los resultados esperados
+
+Los tests se ejecutan automáticamente desde `main.py`.
+
+---
