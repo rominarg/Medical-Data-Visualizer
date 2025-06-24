@@ -103,6 +103,8 @@ python main.py
 
 Esto generará automáticamente los gráficos y ejecutará los tests.
 
+---
+
 ## 🧪 Testing
 
 El proyecto incluye **tests automáticos** ubicados en `test_module.py`.
@@ -116,6 +118,19 @@ Estos tests validan que:
 Los tests se ejecutan automáticamente desde `main.py`.
 
 ---
+
+##  Resultados clave
+
+A partir del análisis se observan patrones claros:
+
+- El sobrepeso y el colesterol elevado presentan una correlación positiva con la enfermedad cardiovascular.
+- Los pacientes con menor actividad física muestran mayor prevalencia de riesgo cardiovascular.
+- La presión arterial presenta una de las correlaciones más fuertes dentro del conjunto de variables clínicas.
+
+Estos resultados no implican causalidad, pero permiten identificar factores de riesgo relevantes.
+
+---
+
 ##  Valor profesional
 
 Este proyecto incluye prácticas de:
