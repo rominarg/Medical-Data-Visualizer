@@ -116,3 +116,20 @@ Estos tests validan que:
 Los tests se ejecutan automáticamente desde `main.py`.
 
 ---
+##  Valor profesional
+
+Este proyecto incluye prácticas de:
+
+* Limpieza de datos
+* Normalización y transformación de variables
+* Análisis exploratorio de datos (EDA)
+* Visualización de datos con seaborn y matplotlib
+* Código validado mediante tests automatizados
+
+---
+
+##  Créditos
+
+Proyecto desarrollado como parte de la certificación **Data Analysis with Python** de freeCodeCamp.
+
+---
